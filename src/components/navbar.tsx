@@ -15,15 +15,15 @@ export default function Navbar() {
                     <div className="flex items-center">
                         <Image src={Icon} alt="Logo" width={40} height={40} />
                     </div>
-                    <div className="hidden md:flex space-x-6 text-[#006CCF]">
+                    <div className="hidden sm:flex space-x-6 text-[#006CCF]">
                         <Link href="/">Home</Link>
                         <Link href="/course">Course</Link>
                         <Link href="/search">Search</Link>
                     </div>
-                    <div className="hidden md:block">
+                    <div className="hidden sm:block">
                         <Button className="bg-[#006CCF] text-white">Sign Up</Button>
                     </div>
-                    <div className="md:hidden">
+                    <div className="sm:hidden">
                         <button onClick={() => setIsOpen(!isOpen)}>
                             <Menu size={24} />
                         </button>
@@ -31,7 +31,7 @@ export default function Navbar() {
                 </div>
             </div>
             {isOpen && (
-                <div className="md:hidden bg-white shadow-md">
+                <div className="sm:hidden bg-white shadow-md">
                     <div className="flex flex-col items-center py-4 space-y-4 text-[#006CCF]">
                         <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
                         <Link href="/course" onClick={() => setIsOpen(false)}>Course</Link>
